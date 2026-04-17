@@ -1,0 +1,99 @@
+[
+  {
+    "nom": "Push Pull Legs - Hardcore (Gym)",
+    "jours_min": 5, "niveau_requis": "Avancé", "objectif": "Gain de masse", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Triceps", "Épaules"],
+      "Mardi": ["Dos", "Biceps"],
+      "Mercredi": ["Jambes", "Abdominaux"],
+      "Jeudi": ["Pectoraux", "Triceps", "Épaules"],
+      "Vendredi": ["Dos", "Biceps"],
+      "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Push Pull Legs - Classique (Gym)",
+    "jours_min": 3, "niveau_requis": "Débutant", "objectif": "Gain de masse", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Triceps", "Épaules"],
+      "Mardi": ["Repos"],
+      "Mercredi": ["Dos", "Biceps"],
+      "Jeudi": ["Repos"],
+      "Vendredi": ["Jambes", "Abdominaux"],
+      "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Upper Lower - Performance (Gym)",
+    "jours_min": 4, "niveau_requis": "Avancé", "objectif": "Gain de masse", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Dos", "Épaules"],
+      "Mardi": ["Jambes", "Abdominaux"],
+      "Mercredi": ["Repos"],
+      "Jeudi": ["Pectoraux", "Dos", "Épaules"],
+      "Vendredi": ["Jambes", "Abdominaux"],
+      "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Bro Split - Débutant (Gym)",
+    "jours_min": 5, "niveau_requis": "Débutant", "objectif": "Maintenir", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux"], "Mardi": ["Dos"], "Mercredi": ["Épaules"],
+      "Jeudi": ["Jambes"], "Vendredi": ["Biceps", "Triceps"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Full Body - Maison",
+    "jours_min": 3, "niveau_requis": "Débutant", "objectif": "Maintenir", "lieu": "Maison",
+    "structure": {
+      "Lundi": ["Pectoraux", "Dos", "Jambes"],
+      "Mardi": ["Repos"],
+      "Mercredi": ["Épaules", "Biceps", "Triceps"],
+      "Jeudi": ["Repos"],
+      "Vendredi": ["Pectoraux", "Jambes", "Abdominaux"],
+      "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Maintenance Full-Body (Gym)",
+    "jours_min": 2, "niveau_requis": "Débutant", "objectif": "Maintenir", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Dos", "Jambes"], "Mardi": ["Repos"], "Mercredi": ["Repos"],
+      "Jeudi": ["Épaules", "Bras", "Abdominaux"], "Vendredi": ["Repos"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Bro Split Maintenance (Gym)",
+    "jours_min": 3, "niveau_requis": "Débutant", "objectif": "Maintenir", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Triceps"], "Mardi": ["Repos"], "Mercredi": ["Dos", "Biceps"],
+      "Jeudi": ["Repos"], "Vendredi": ["Jambes", "Épaules"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "Upper/Lower Maintenance (Gym)",
+    "jours_min": 4, "niveau_requis": "Avancé", "objectif": "Maintenir", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Dos", "Épaules"], "Mardi": ["Jambes", "Abdominaux"], "Mercredi": ["Repos"],
+      "Jeudi": ["Pectoraux", "Dos", "Épaules"], "Vendredi": ["Jambes", "Abdominaux"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "PPL Performance Maintenance (Gym)",
+    "jours_min": 5, "niveau_requis": "Avancé", "objectif": "Maintenir", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Triceps"], "Mardi": ["Dos", "Biceps"], "Mercredi": ["Jambes"],
+      "Jeudi": ["Épaules", "Abdominaux"], "Vendredi": ["Pectoraux", "Dos"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  },
+  {
+    "nom": "PPL - Gain de Masse (Gym)",
+    "jours_min": 5, "niveau_requis": "Avancé", "objectif": "Gain de masse", "lieu": "Gym",
+    "structure": {
+      "Lundi": ["Pectoraux", "Triceps", "Épaules"], "Mardi": ["Dos", "Biceps"], "Mercredi": ["Jambes", "Abdominaux"],
+      "Jeudi": ["Pectoraux", "Triceps", "Épaules"], "Vendredi": ["Dos", "Biceps"], "Samedi": ["Repos"], "Dimanche": ["Repos"]
+    }
+  }
+
+]
