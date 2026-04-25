@@ -1,7 +1,7 @@
 import streamlit as st 
 import pandas as pd
-from logic import splitprog, xercices
-
+from logic import splitprog, xercices, charger_donnees
+from inference import generer_progression
 
 st.set_page_config(page_title="FitGen Dashboard", layout="wide")
 
@@ -14,7 +14,7 @@ if 'voir_exos' not in st.session_state:
 st.title("🤖 FitGen AI - Ton Coach Intelligent")
 
 
-menu_programme, menu_option2, menu_option3 = st.tabs(["Programme", "option 2 ", "option 3"])
+menu_programme, menu_progression, menu_option3 = st.tabs(["Programme", "Progression 6 Semaines ", "option 3"])
 
 
 with st.sidebar:
@@ -88,11 +88,57 @@ with menu_programme:
                 st.table(df[["Jour", "Détails Exercices"]])
 
 
+# CONTENU YANN
 
-# --- CONTENU : OPTION 2 ---
-with menu_option2:
-    st.title("Option 2")
-    st.info("fonctions")
+with menu_progression:
+    st.write("Adapte ton programme pour 6 semaines.")
+
+    if not st.session_state.current_split:
+        st.warning("Genere d'abord un programme dans l'onglet Programme.")
+    else:
+        semaine = st.slider("Semaine", min_value=1, max_value=6, value=1, step=1)
+
+        matos_safe = matos if lieu == "Maison" else []
+
+        muscles = []
+        for v in st.session_state.current_split["structure"].values():
+            if isinstance(v, list) and v != ["Repos"]:
+                muscles.extend(v)
+
+        noms_exos = xercices(muscles, niveau, matos_safe, lieu)
+        all_exos = charger_donnees("Exercice.json")
+        variantes = {e.get("variante_progression") for e in all_exos if e.get("variante_progression")}
+        exos_programme = [e for e in all_exos if e["nom"] in noms_exos and e["nom"] not in variantes]
+
+        if not exos_programme:
+            st.warning("Aucun exercice trouve pour ce profil.")
+        else:
+            progression = generer_progression(exos_programme, semaine, niveau, all_exos)
+
+            st.subheader(f"Programme — Semaine {semaine} / 6")
+
+            if semaine in (3, 6):
+                st.info("Semaine de progression : variantes plus difficiles potentiellement introduites.")
+
+            lignes = []
+            for p in progression:
+                unite = p.get("unite", "reps")
+                volume = f"{p['sets']} x {p['reps']}{'s' if unite == 'secondes' else ' reps'}"
+                ligne = {
+                    "Exercice": p["nom"],
+                    "Muscle": p["muscle"],
+                    "Volume": volume,
+                }
+                if p["est_variante"]:
+                    ligne["Exercice"] += "  *"
+                lignes.append(ligne)
+
+            import pandas as pd
+            df = pd.DataFrame(lignes)
+            st.dataframe(df, use_container_width=True, hide_index=True)
+
+            if any(p["est_variante"] for p in progression):
+                st.caption("* Variante introduite cette semaine")
 
 # --- CONTENU : OPTION 3 ---
 with menu_option3:
