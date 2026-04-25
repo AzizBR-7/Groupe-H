@@ -14,10 +14,13 @@ Assurez-vous d'avoir Python 3.8+ installé sur votre machine.
 git clone [https://github.com/AzizBR-7/Groupe-H.git](https://github.com/AzizBR-7/Groupe-H.git)
 cd Groupe-H
 
+Installation:
 pip install streamlit pandas
 
+Exécution:
 streamlit run src/app.py
 
+Structure du Dépôt:
 ├── data/                  # Base de connaissances
 │   ├── Exercice.json      # Exercices et équipements requis
 │   └── Splits.json        # Structures d'entraînement
