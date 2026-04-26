@@ -5,7 +5,7 @@ Ce projet est une application interactive conçue pour automatiser la création 
 ### ------Membres de l'équipe-------
 - Mohamed Aziz Ben Rhouma (@AzizBR-7)
 -
--
+- Maëlice Jandl (@luanaleen)
 
 1. **Prérequis:**
 Assurez-vous d'avoir Python 3.8+ installé sur votre machine.
