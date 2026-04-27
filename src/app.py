@@ -34,7 +34,9 @@ with st.sidebar:
         lieu = st.radio("Lieu d'entraînement", ["Maison", "Gym"])
     
 
-    if lieu == "Maison":
+    if lieu == "Gym":
+        matos = ["barre", "haltères", "poulie", "machine guidée", "banc", "chaise"]
+    else:
         matos = st.multiselect("Matériel à la maison", ["haltères", "élastique", "chaise", "tapis"])
 
 
