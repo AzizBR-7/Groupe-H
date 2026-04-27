@@ -4,7 +4,7 @@ Ce projet est une application interactive conçue pour automatiser la création 
 
 ### ------Membres de l'équipe-------
 - Mohamed Aziz Ben Rhouma (@AzizBR-7)
--
+- Yann Arthur Nguidjoi (@yannarthn5)
 - Maëlice Jandl (@luanaleen)
 
 1. **Prérequis:**
@@ -27,6 +27,7 @@ Structure du Dépôt:
 │   └── Splits.json        # Structures d'entraînement
 ├── src/                   # Code source
 │   ├── app.py             # Interface utilisateur
+│   └── inference.py       # Moteur de progression 6 semaines
 │   └── logic.py           # Logique de filtrage et algorithmes
 ├── Blog.md                # Documentation détaillée
 └── README.md              # Guide de démarrage
